@@ -1,17 +1,21 @@
 import express from "express";
 import cors from "cors";
 import reqLogger from "./middleware/reqLogger";
+import config from "./config";
+import router from "./routes/index";
 
 const app = express(); // Calling express function
-const port = 5000; // Assigning a port
+const port = config.PORT || 5000; // Assigning a port
 
 app.use(cors()); // Initializing Cross-Origin Resource Sharing
 app.use(express.json()); // Parsing incoming JSON requests and puts the parsed data in req
+
 app.use(reqLogger); // Logging requests
+app.use("/api/v1", router); // Running routes
 
 // GET request to homepage
 app.get("/", (req, res) => {
-  res.send("Welcome to Demo Credit app");
+  res.send(`Welcome to ${config.APP_NAME} app`);
 });
 
 // Global 404 error handler
@@ -23,7 +27,7 @@ app.use((req, res) => res.status(404).send({
 (async () => {
   app.listen(port, async () => {
     console.log(
-      `Demo Credit API listening on ${port}`
+      `${config.APP_NAME} API listening on ${port}`
     );
   });
 })();

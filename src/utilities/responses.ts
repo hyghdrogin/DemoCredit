@@ -13,13 +13,13 @@ function successResponse(
   res: Response,
   statusCode: number,
   message: string,
-  data = [],
+  data: any = [],
 ) {
   const responseObject = { statusCode, message, data };
   return res.status(statusCode).send(responseObject);
 }
 
-const handleError = (err: { message: string; stack: unknown; }, req: Request) => {
+const handleError = (err: any, req: Request) => {
   console.log(`
       Error caught at ${req.path}, 
       Request body: ${JSON.stringify(req.body)},
