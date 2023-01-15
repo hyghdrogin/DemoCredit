@@ -12,7 +12,9 @@ const config = {
   DATABASE_PASSWORD: process.env.DATABASE_PASSWORD,
   DATABASE_HOST: process.env.DATABASE_HOST,
   DATABASE_NAME: process.env.DATABASE_NAME,
-  SEED_PASSWORD: process.env.SEED_PASSWORD
+  SEED_PASSWORD: process.env.SEED_PASSWORD,
+  PAYSTACK_SECRET_KEY: process.env.PAYSTACK_SECRET_KEY,
+  PAYSTACK_PUBLIC_KEY: process.env.PAYSTACK_PUBLIC_KEY
 };
 
 const configIsAbsent = Object.entries(config)

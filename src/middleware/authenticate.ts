@@ -15,7 +15,7 @@ export default class Authentication {
         return errorResponse(res, 401, "Unauthorized");
       }
       const token = authenticateHeader.split(" ")[1];
-      if (token !== "valid-token") {
+      if (!token) {
         return errorResponse(res, 401, "Invalid token");
       }
       next();
