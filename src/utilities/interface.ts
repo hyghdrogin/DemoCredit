@@ -25,3 +25,14 @@ export interface ICredit {
   created_at?: Date
   updated_at?: Date
 }
+
+export interface IDebit {
+  id?: string
+  receiver?: string
+  sender?: string
+  amount: number
+  type?: string
+  status?: string
+  created_at?: Date
+  updated_at?: Date
+}

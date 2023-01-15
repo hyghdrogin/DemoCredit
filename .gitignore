@@ -6,5 +6,4 @@ package-lock.json
 
 dist/
 
-migrations/20230115193759_debits.ts
-seeds/03_debits.ts
+src/test
