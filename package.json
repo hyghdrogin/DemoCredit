@@ -15,8 +15,17 @@
     "seed": "knex seed:run",
     "migrate": "knex migrate:latest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyghdrogin/DemoCredit.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/hyghdrogin/DemoCredit/issues"
+  },
+  "homepage": "https://github.com/hyghdrogin/DemoCredit#readme",
   "author": "Omopariola Emmanuel",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "axios": "^1.2.2",
     "bcrypt": "^5.1.0",
