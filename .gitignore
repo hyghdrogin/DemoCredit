@@ -6,4 +6,9 @@ package-lock.json
 
 dist/
 
-src/test
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# nyc test coverage
+.nyc_output

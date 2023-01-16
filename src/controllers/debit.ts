@@ -54,7 +54,7 @@ export default class AdminDebitController {
       await database("users").where({
         id: receiver.id
       }).increment("balance", amount);
-      return successResponse(res, 200, "Money transfered successfully.");
+      return successResponse(res, 200, "Money transferred successfully.");
     } catch (error) {
       handleError(error, req);
       return errorResponse(res, 500, "Server error.");

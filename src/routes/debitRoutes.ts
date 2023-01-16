@@ -1,6 +1,6 @@
 import { Router } from "express";
-import DebitController from "../controller/debit";
-import Authentication from "../middleware/authenticate";
+import DebitController from "../controllers/debit";
+import Authentication from "../middlewares/authenticate";
 
 const router = Router();
 const { authenticate } = Authentication;

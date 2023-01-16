@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-namespace */
 import express from "express";
 import cors from "cors";
-import reqLogger from "./middleware/reqLogger";
+import reqLogger from "./middlewares/reqLogger";
 import config from "./config";
 import router from "./routes/index";
 import { CustomRequest } from "./utilities/interface";

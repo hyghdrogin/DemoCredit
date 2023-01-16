@@ -7,7 +7,11 @@
     "build": "tsc",
     "start": "npm run build && node dist/app.js",
     "dev": "ts-node-dev src/app.ts",
-    "lint": "eslint src/**/*.ts"
+    "lint": "eslint src/**/*.ts",
+    "test": "npm run build && nyc --require --reporter=html --reporter=text mocha -r ts-node/register './dist/src/test/index.js' --timeout 50000 --recursive --exit",
+    "coverage": "nyc npm run test && nyc report --reporter=text-lcov --reporter=lcov | node ./node_modules/coveralls/bin/coveralls.js --verbose",
+    "seed": "knex seed:run",
+    "migrate": "knex migrate:latest"
   },
   "author": "Omopariola Emmanuel",
   "license": "MIT",
@@ -35,6 +39,7 @@
     "eslint": "^8.31.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-import-resolver-typescript": "^3.5.3",
+    "mocha": "^10.2.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^15.1.0",
     "sinon": "^15.0.1",

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import database from "../../queries";
-import Payment from "../middleware/paystack";
+import Payment from "../middlewares/paystack";
 import { ICredit, IUser } from "../utilities/interface";
 import { successResponse, errorResponse, handleError } from "../utilities/responses";
 

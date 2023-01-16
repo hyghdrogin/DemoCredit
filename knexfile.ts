@@ -1,6 +1,5 @@
 // Update with your config settings.
 import config from "./src/config";
-
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
